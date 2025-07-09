@@ -1,18 +1,20 @@
 class GitSpice < Formula
   desc "Manage stacked Git branches"
   homepage "https://abhinav.github.io/git-spice/"
-  url "https://github.com/abhinav/git-spice/archive/refs/tags/v0.13.0.tar.gz"
-  sha256 "22f1e875fd5da1683b20815c3ebc7da07bbba1b5b37528396cf065880f681268"
+  url "https://github.com/abhinav/git-spice/archive/refs/tags/v0.15.2.tar.gz"
+  sha256 "668564086dcf51acbacdf30103cc916cbaeac8be8e80bad3a96e388dac1bd360"
   license "GPL-3.0-or-later"
   head "https://github.com/abhinav/git-spice.git", branch: "main"
 
+  no_autobump! because: :bumped_by_upstream
+
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_sequoia: "60a087f42b47275314a7b55af7c0918ced5d49511772358f0af44ed66da555fa"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "60a087f42b47275314a7b55af7c0918ced5d49511772358f0af44ed66da555fa"
-    sha256 cellar: :any_skip_relocation, arm64_ventura: "60a087f42b47275314a7b55af7c0918ced5d49511772358f0af44ed66da555fa"
-    sha256 cellar: :any_skip_relocation, sonoma:        "1524a4d2775a1102dc30ca2bfcce3f74f291c8189b33d360bebc526215626927"
-    sha256 cellar: :any_skip_relocation, ventura:       "1524a4d2775a1102dc30ca2bfcce3f74f291c8189b33d360bebc526215626927"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "a8c885be077e9ba0c769efd9daef6be6c51cd2bc00f53be5fd7d3dc1e141fd22"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia: "60639e974d42269ec19422e26f413ff755b034389d0ad249bdcb8deeaed8df3d"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "60639e974d42269ec19422e26f413ff755b034389d0ad249bdcb8deeaed8df3d"
+    sha256 cellar: :any_skip_relocation, arm64_ventura: "60639e974d42269ec19422e26f413ff755b034389d0ad249bdcb8deeaed8df3d"
+    sha256 cellar: :any_skip_relocation, sonoma:        "130823f031dac5581ae1960e278baf389efb66455509e7c30dceb7464bd7c629"
+    sha256 cellar: :any_skip_relocation, ventura:       "130823f031dac5581ae1960e278baf389efb66455509e7c30dceb7464bd7c629"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "fa81e12b9428e99281c043b6833b53a88e5800d25d0cec17f779f04e2e97b0c6"
   end
 
   depends_on "go" => :build

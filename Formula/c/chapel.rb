@@ -3,27 +3,28 @@ class Chapel < Formula
 
   desc "Programming language for productive parallel computing at scale"
   homepage "https://chapel-lang.org/"
-  url "https://github.com/chapel-lang/chapel/releases/download/2.4.0/chapel-2.4.0.tar.gz"
-  sha256 "a51a472488290df12d1657db2e7118ab519743094f33650f910d92b54c56f315"
+  url "https://github.com/chapel-lang/chapel/releases/download/2.5.0/chapel-2.5.0.tar.gz"
+  sha256 "020220ca9bf52b9f416e9a029bdc465bb1f635c1e274c6ca3c18d1f83e41fce1"
   license "Apache-2.0"
-  revision 1
   head "https://github.com/chapel-lang/chapel.git", branch: "main"
 
+  no_autobump! because: :bumped_by_upstream
+
   bottle do
-    sha256 arm64_sequoia: "39d09a4ea7a236789faabbda9e37a1959092a7e62b78bdc766a103c2a5a7e7dd"
-    sha256 arm64_sonoma:  "ed069fbef4e4c55675657e27889a903dd33dc096211a57fe5e76978969c8d25c"
-    sha256 arm64_ventura: "f3bb27f2dcc20c01fe7a2ba76f6035b8acbc8f90435c996122065c744f7308cf"
-    sha256 sonoma:        "df799ae0298a4dce4d9723f447fdbb3d1e8d4e6ba9351d3c4d2de36dd21e591e"
-    sha256 ventura:       "d34c180e3189d10e91f9bc0027c2284b5dd56d0c487502d68e5261be3b9ab665"
-    sha256 arm64_linux:   "e4a6d3dc4ab06f2a8274501989aec21ff31f9cbe52eb640e1b27b2c8bc9cd048"
-    sha256 x86_64_linux:  "8b4606eb517371eab693e70bf8b4170fe21d8b8ce411d0fc347e2cd53f780148"
+    sha256 arm64_sequoia: "a5a93684662e89ab9bd90ae07a4c9a58ad81ec04259c7c81a9cfad561f67da0b"
+    sha256 arm64_sonoma:  "68b76ffbc83f9e5a7bd12092339d44b3ea14e6dca0be102de3feb00eff507dfc"
+    sha256 arm64_ventura: "cc3bf308763816d2da9a7a195f386aafde8df3b3ac8d5291171484273a12d18d"
+    sha256 sonoma:        "5aa538418e487a2e0962b12462c8f4d9bd4cd8b7a3e13395e4b938ea650a657a"
+    sha256 ventura:       "262872aa45e49d3829b9c08305573325bbed47e6a9bae88662ba6d5c3555fa7e"
+    sha256 arm64_linux:   "bcd47a3df6d01f14709be8036d1f7984eecfb37b32713869e535c32f4e829ea1"
+    sha256 x86_64_linux:  "baaa4df00345e3dc085e17754379f709b72f186bf00e6c68418baafa1ec59e3f"
   end
 
   depends_on "cmake"
   depends_on "gmp"
   depends_on "hwloc"
   depends_on "jemalloc"
-  depends_on "llvm@19"
+  depends_on "llvm"
   depends_on "pkgconf"
   depends_on "python@3.13"
 

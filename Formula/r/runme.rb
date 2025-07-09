@@ -1,18 +1,20 @@
 class Runme < Formula
   desc "Execute commands inside your runbooks, docs, and READMEs"
   homepage "https://runme.dev/"
-  url "https://github.com/runmedev/runme/archive/refs/tags/v3.13.2.tar.gz"
-  sha256 "6aa04d41735d1d3f5cef9f96380ec61c31ff8ec04f82a875958fb3db7d069513"
+  url "https://github.com/runmedev/runme/archive/refs/tags/v3.14.3.tar.gz"
+  sha256 "e6ec34b60e4d4892d7f22895a04905c7bead2477f05d39c0f3bb674faf4815f9"
   license "Apache-2.0"
   head "https://github.com/runmedev/runme.git", branch: "main"
 
+  no_autobump! because: :requires_manual_review
+
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_sequoia: "8c6f5e81e1355c8867293f14eec182f4779147f732631a1c01243ba5074ab94d"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "8c6f5e81e1355c8867293f14eec182f4779147f732631a1c01243ba5074ab94d"
-    sha256 cellar: :any_skip_relocation, arm64_ventura: "8c6f5e81e1355c8867293f14eec182f4779147f732631a1c01243ba5074ab94d"
-    sha256 cellar: :any_skip_relocation, sonoma:        "e6a2c2deca518146e7067704a362f026b216f2fe78ecea4839f78501e31b8a99"
-    sha256 cellar: :any_skip_relocation, ventura:       "e6a2c2deca518146e7067704a362f026b216f2fe78ecea4839f78501e31b8a99"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "3d231e79a8f53efd35d0dffe40eaf8b771837b1ce9f11db7a1c8e22f17f595f7"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia: "bbc73fc73c5d73c977f6f4ca2c93a3feb48037e159930a08a107dfdff45a0b3e"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "bbc73fc73c5d73c977f6f4ca2c93a3feb48037e159930a08a107dfdff45a0b3e"
+    sha256 cellar: :any_skip_relocation, arm64_ventura: "bbc73fc73c5d73c977f6f4ca2c93a3feb48037e159930a08a107dfdff45a0b3e"
+    sha256 cellar: :any_skip_relocation, sonoma:        "dd385b3898ae77125177e6ff2aefae8011d6118679eb11b725622356ee9e1443"
+    sha256 cellar: :any_skip_relocation, ventura:       "dd385b3898ae77125177e6ff2aefae8011d6118679eb11b725622356ee9e1443"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "93583b5f7d5b3f29ba7502d2d89e6d538cd8d28e20d10822392dcf0e174b0650"
   end
 
   depends_on "go" => :build
